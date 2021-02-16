@@ -1,12 +1,13 @@
 var durum = true;
 var user = { id: 1, adi: "Murat" };
+// var ilanlar = { id: 1, uid: 1, ilan: "Araba" };
 
 function login() {
     return new Promise(function (resolve, reject) {
         if (durum == true) {
-            setTimeout(() => {
-                resolve(console.log({ id: 1, adi: "Ahmet" }));
-            }, 3000);
+            setTimeout (() => {
+                resolve({ id: 1, adi: "Ahmet" });
+            }, 2000);
         } else {
             reject('kullanici bilgileri bulunamadi');
         }
@@ -15,22 +16,30 @@ function login() {
 
 function listele() {
     return new Promise(function (resolve, reject) {
-        setTimeout(() => {
-            resolve(console.log("ilanlar listelendi"));
-        }, 2000);
-    })
+        setTimeout(function () { resolve(console.log("ilanlar listelendi")); }, 2000);
+    });
 }
 
 function yorumlar() {
-    return new Promise(function (resolve, reject) {
-        setTimeout(function () { resolve(console.log("yorumlar geldi")); }, 500);
-    })
+    setTimeout(() => {
+        console.log("yorumlar geldi");
+    }, 1000);
 }
 
 async function islemAkisi() {
-    await login();
-    await listele();
-    yorumlar();
+    await login()
+        .then((data2) => {
+            console.log(data2);
+        
+            listele()
+                .then((data) => {                   
+                    yorumlar();
+            })
+    })           
+        
+        .catch((hata) => {
+            console.log(hata);
+        });
 }
 
 islemAkisi();
