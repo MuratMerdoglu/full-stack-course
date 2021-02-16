@@ -4,7 +4,7 @@ var user = { id: 1, adi: "Murat" };
 
 function login() {
     return new Promise(function (resolve, reject) {
-        if (durum == false) {
+        if (durum == true) {
             resolve({ id: 1, adi: "Ahmet" });
         } else {
             reject('kullanici bilgileri bulunamadi');
@@ -21,12 +21,8 @@ function listele() {
 login()
     .then((data) => {
         console.log(data);
-        listele();
-        return 'ikinci islem';
-    })
-    .then((data2) => {
-        console.log(data2);
-    })
+        listele();        
+    })   
     .catch((hata) => {
         console.log(hata);
     });
