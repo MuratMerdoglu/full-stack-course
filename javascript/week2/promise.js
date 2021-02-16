@@ -4,7 +4,7 @@ var user = { id: 1, adi: "Murat" };
 
 function login() {
     return new Promise(function (resolve, reject) {
-        if (durum == true) {
+        if (durum == false) {
             resolve({ id: 1, adi: "Ahmet" });
         } else {
             reject('kullanici bilgileri bulunamadi');
