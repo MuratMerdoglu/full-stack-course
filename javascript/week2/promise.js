@@ -5,7 +5,9 @@ var user = { id: 1, adi: "Murat" };
 function login() {
     return new Promise(function (resolve, reject) {
         if (durum == true) {
-            resolve({ id: 1, adi: "Ahmet" });
+            setTimeout (() => {
+                resolve({ id: 1, adi: "Ahmet" });
+            }, 2000);
         } else {
             reject('kullanici bilgileri bulunamadi');
         }
@@ -15,19 +17,16 @@ function login() {
 function listele() {
     setTimeout(() => {
         console.log("ilanlar listelendi");
-    }, 2000);
+    }, 1000);
 }
 
 login()
-    .then((data) => {
-        console.log(data);
-        listele();
-        return 'ikinci islem';
-    })
     .then((data2) => {
         console.log(data2);
+        listele();
     })
     .catch((hata) => {
         console.log(hata);
     });
+    
 
