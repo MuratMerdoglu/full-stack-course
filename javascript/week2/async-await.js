@@ -30,13 +30,11 @@ async function islemAkisi() {
     await login()
         .then((data2) => {
             console.log(data2);
-        
             listele()
                 .then((data) => {                   
                     yorumlar();
-            })
-    })           
-        
+                })
+        }) 
         .catch((hata) => {
             console.log(hata);
         });
