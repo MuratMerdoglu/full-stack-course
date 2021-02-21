@@ -22,10 +22,11 @@ var i = true;
 
 // arrowFunction();
 
-function topla(sayi1, sayi2) {
-    return sayi1 + sayi2;
-}
+// function topla(sayi1, sayi2) {
+//     return sayi1 + sayi2;
+// }
 
-const topla = (sayi1, sayi2) => sayi1 + sayi2;
+// const topla = (sayi1, sayi2) => sayi1 + sayi2;
 
-console.log(topla(23, 12));
+// console.log(topla(23, 12));
+
