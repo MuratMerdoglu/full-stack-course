@@ -1,6 +1,8 @@
 
 
 4'üncü hafta odevi
+
+
     array functionlarindan örnekler yapilacak
     - klasör yapisi
         - data.js // export edilecek
