@@ -64,17 +64,17 @@ var i = true;
 
 // spread operator.     ...
 
-// const arr = ['abc', 'def', 'ghi'];
+const arr = ['abc', 'def', 'ghi'];
 
-// console.log(arr);
-// console.log(...arr);
+console.log(arr);
+console.log(...arr);
 
-// const arr = ['abc', 'def', 'ghi'];
-// // const arr2 = [...arr, 12, 'wer'];
-// // const arr2 = ['xyz', ...rest] = arr
+const arr = ['abc', 'def', 'ghi'];
+const arr2 = [...arr, 12, 'wer'];
+const arr2 = ['xyz', ...rest] = arr
 
-// console.log(arr)
-// console.log(arr2)
+console.log(arr)
+console.log(arr2)
 
 
 const func = (...arg) => {
