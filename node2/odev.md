@@ -1,0 +1,4 @@
+- ayni projeyi yazalim.
+- data klasörünü veritabani olarak kullanalim.
+  - data klasöründe usersData.txt todos.Data.txt
+    - yani dosyadan okuyalim ve dosyaya yazalim, silelim yada degistirelim (CRUD).
