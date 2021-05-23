@@ -58,7 +58,7 @@ const remove = async (req, res) => {
     const id = req.params.id;
 
     try {
-        const data = await Users.remove({ _id: id });
+        const data = await Users.deleteOne({ _id: id });
 
         res.setHeader('Content-Type', 'application/json');
 

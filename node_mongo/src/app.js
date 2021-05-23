@@ -33,3 +33,5 @@ app.use('/todos', todosRoutes);
 
 
 app.listen(PORT, console.log('server 3000 portunda calisiyor.'));
+
+module.exports = app;
