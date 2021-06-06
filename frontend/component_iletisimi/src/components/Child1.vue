@@ -8,10 +8,14 @@
     <p v-for="(item, index) in liste" :key="index">{{ item.adi }}</p>
 
     <button @click="clickEvent">Parent a Gönder</button>
+    <hr />
+    <button @click="clickEventBus">EventBus üzerinden gönder</button>
   </div>
 </template>
 
 <script>
+import { eventBus } from "../main";
+
 export default {
   name: "Child1",
   // props: ["mesaj", "liste"],
@@ -33,6 +37,10 @@ export default {
   methods: {
     clickEvent() {
       this.$emit("childEmit", "Child tan gelen veri");
+    },
+    clickEventBus() {
+      // eventBus.$emit("eventBusEmit", "EventBus tan gelen veri");
+      eventBus.changeData("EventBus tan gelen veri");
     },
   },
 };
