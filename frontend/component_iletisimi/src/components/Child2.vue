@@ -5,10 +5,14 @@
     <br />
     Child_1 den gelen veri: {{ child_1 }}
     <br />
+    EventBus tan gelen veri: {{ eventBusData }}
+    <br />
   </div>
 </template>
 
 <script>
+import { eventBus } from "../main";
+
 export default {
   name: "Child2",
   props: {
@@ -17,12 +21,20 @@ export default {
       name: "mesaj",
     },
   },
-  data: () => {
+  data() {
     return {
       deger: "abc",
+      eventBusData: "",
     };
   },
   methods: {},
+  created() {
+    const _self = this;
+
+    eventBus.$on("eventBusEmit", (data) => {
+      _self.eventBusData = data;
+    });
+  },
 };
 </script>
 

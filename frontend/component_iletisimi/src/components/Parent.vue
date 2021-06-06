@@ -4,7 +4,7 @@
     {{ adi }}
     <br />
     Child_1 den gelen veri: {{ childData }}
-
+    <button @click="alert()"></button>
     <Child1
       mesaj="Parent tan gelen mesaj"
       :liste="liste"
