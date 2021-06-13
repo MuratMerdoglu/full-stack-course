@@ -47,7 +47,7 @@ const findAll = async (req, res) => {
     try {
         const data = await Users.find();
         res.setHeader('Content-Type', 'application/json');
-
+        delete data.password;
         return res.json(data);
     } catch (err) {
         res.status(403).json({ message: 'User could not found.', error: err })
